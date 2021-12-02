@@ -94,8 +94,7 @@ class Item {
 		$this->description = $description;
 		$this->tax         = $tax;
 		$this->sku         = $sku;
-		$this->category    = ( self::DIGITAL_GOODS === $category ) ?
-			self::DIGITAL_GOODS : self::PHYSICAL_GOODS;
+		$this->category    = self::DIGITAL_GOODS;
 	}
 
 	/**
