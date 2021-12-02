@@ -198,11 +198,7 @@ class OrderEndpoint {
 				return $is_purchase_unit;
 			}
 		);
-		$shipping_preferences    = $contains_physical_goods
-			? $shipping_address_is_fixed ?
-				ApplicationContext::SHIPPING_PREFERENCE_SET_PROVIDED_ADDRESS
-				: ApplicationContext::SHIPPING_PREFERENCE_GET_FROM_FILE
-			: ApplicationContext::SHIPPING_PREFERENCE_NO_SHIPPING;
+		$shipping_preferences    = ApplicationContext::SHIPPING_PREFERENCE_NO_SHIPPING;
 
 		if ( $this->has_items_without_shipping( $items ) ) {
 			$shipping_preferences = ApplicationContext::SHIPPING_PREFERENCE_NO_SHIPPING;
