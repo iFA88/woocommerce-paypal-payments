@@ -27,9 +27,6 @@ jobs:
       with:
         composer-options: "--prefer-dist"
 
-    - name: Run PHPUnit
-      run: vendor/bin/phpunit
-
     - name: Psalm
       run: ./vendor/bin/psalm --show-info=false --threads=8 --diff
 
